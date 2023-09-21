@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: AppStrings.appName,
-      theme: AppTheme.themeData,
+      theme: AppTheme.getAppTheme(context),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) {
         return AppRouter.generateRoutes(settings);

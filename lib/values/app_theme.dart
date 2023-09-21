@@ -1,47 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:furrl/values/app_constants.dart';
 
-import 'app_values.dart';
-
 class AppTheme {
 
-  static ThemeData themeData = ThemeData(
+  static ThemeData getAppTheme(BuildContext context){
 
-    fontFamily: 'inclusiveSans',
+    double width = MediaQuery.of(context).size.width;
 
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+    return ThemeData(
 
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.black,
-      elevation: 1,
-    ),
+      fontFamily: 'inclusiveSans',
 
-    outlinedButtonTheme: OutlinedButtonThemeData(
-      style: ButtonStyle(
-        fixedSize: MaterialStatePropertyAll(Size(width, 46)),
-        side: MaterialStatePropertyAll(BorderSide(color: AppColors.primaryColor)),
-        foregroundColor: MaterialStatePropertyAll(AppColors.primaryColor),
+      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 1,
       ),
-    ),
 
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-        elevation: const MaterialStatePropertyAll(0),
-        fixedSize: MaterialStatePropertyAll(Size(width, 46)),
-        side: MaterialStatePropertyAll(BorderSide(color: AppColors.primaryColor)),
-        foregroundColor: MaterialStatePropertyAll(AppColors.primaryColor),
-      ),
-    ),
-
-    iconButtonTheme: const IconButtonThemeData(
-
-      style: ButtonStyle(
-        fixedSize: MaterialStatePropertyAll(
-          Size(20, 20),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+          fixedSize: MaterialStatePropertyAll(Size(width, 46)),
+          side: MaterialStatePropertyAll(BorderSide(color: AppColors.primaryColor)),
+          foregroundColor: MaterialStatePropertyAll(AppColors.primaryColor),
         ),
-        maximumSize: MaterialStatePropertyAll(Size(26, 26))
       ),
-    ),
-  );
+
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          elevation: const MaterialStatePropertyAll(0),
+          fixedSize: MaterialStatePropertyAll(Size(width, 46)),
+          side: MaterialStatePropertyAll(BorderSide(color: AppColors.primaryColor)),
+          foregroundColor: MaterialStatePropertyAll(AppColors.primaryColor),
+        ),
+      ),
+
+      iconButtonTheme: const IconButtonThemeData(
+        style: ButtonStyle(
+            fixedSize: MaterialStatePropertyAll(
+              Size(20, 20),
+            ),
+            maximumSize: MaterialStatePropertyAll(Size(26, 26))
+        ),
+      ),
+    );
+  }
+
 }
