@@ -19,3 +19,6 @@ Packages Used :
 2. path_provider
 3. bloc
 4. flutter_bloc
+
+## Contact Me : 
+patelkeval936@gmail.com
