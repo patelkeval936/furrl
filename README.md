@@ -1,16 +1,18 @@
-# furrl
+# Furrl App
 
-A new Flutter project.
+App includes 3 screens : 
+1. View Frame
+2. Edit Frame - can make collage
+   1. resize image
+   2. relocate image
+   3. tap to get image on top
+3. Home Screen with animations
 
-## Getting Started
+State Management Used : BLoC
 
-This project is a starting point for a Flutter application.
+Packages Used :
+1. image_picker
+2. path_provider
+3. bloc
+4. flutter_bloc
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

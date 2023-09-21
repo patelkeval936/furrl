@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furrl/presentation/edit_frame/edit_frame.dart';
+import 'package:furrl/router/app_router.dart';
+import 'package:furrl/values/app_strings.dart';
 import 'package:furrl/values/app_theme.dart';
 
 void main() {
@@ -12,11 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: AppStrings.appName,
       theme: AppTheme.themeData,
       debugShowCheckedModeBanner: false,
-      home: EditFrame(),
+      onGenerateRoute: (settings) {
+        return AppRouter.generateRoutes(settings);
+      },
     );
   }
 }
-

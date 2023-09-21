@@ -1,18 +1,15 @@
 
 import 'package:flutter/material.dart';
 
-class ImageData{
+class FrameImageData {
 
   Image image;
   Size size;
-
   double left;
   double top;
   double? right;
   double? bottom;
 
-  Color color;
-
-  ImageData(this.image,this.size,this.left,this.top,this.color,{this.right,this.bottom});
+  FrameImageData({required this.image,required this.size,required this.left,required this.top,this.right,this.bottom});
 
 }
